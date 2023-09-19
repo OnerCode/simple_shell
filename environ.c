@@ -1,3 +1,5 @@
+#include <stddef.h>
+#include <stdio.h>
 /**
  * print_environment -  print env on output
  *
