@@ -6,6 +6,7 @@
 #include <unistd.h>
 #include <fcntl.h>
 #include "shell.h"
+
 /**
  * print_environment -  print env on output
  *
