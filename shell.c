@@ -36,20 +36,20 @@ void handle_env_command(void)
 	print_environment();
 }
 /**
- *main - shell program main
+ *main - main shell program
  *@argc: argument count
- *@argv: arguments to accept
+ *@argv: aguments to accept
  *
- *Return: Success 0
+ *Return: 0 Success
  */
-
 int main(int argc, char **argv)
 {
-	char *command = NULL, args[32], prompt[] = "hsh>";
+	char *command = NULL, *args[32], prompt[] = "hsh> ";
 	size_t command_length = 0;
 	ssize_t read_bytes;
-	int is_interactive = isatty(STDIN_FILENO), com_num = 1;
-	const char *prg_nme = (argc > 0) ? argv : "hsh";
+	int is_interactive = isatty(STDIN_FILENO);
+	int com_num = 1;
+	const char *prg_nme = (argc > 0) ? argv[0] : "hsh";
 
 	if (argc > 1)
 	{
